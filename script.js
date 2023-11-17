@@ -2,10 +2,10 @@ function mandarOTP(){
   const email = document.getElementById('email');
   const otpverify = document.getElementsByClassName('otpverify')[0];
   const otpInput = document.getElementById('otpInput');
- const btnVerificar = document.getElementById('btnVerificar');
+  const btnVerificar = document.getElementById('btnVerificar');
 
   //gerar numero aleatorio como otp
-  let otpVal = Math.floor(Math.random() * 1000);
+  let otpVal = Math.floor(Math.random() * 10000);
 
   //corpo do email com a otp criada
   let corpoEmail = 
@@ -29,8 +29,7 @@ function mandarOTP(){
                 // verificar se o email é valido
                 if(otpInput.value == otpVal){
                     alert("Email válido...");
-                }
-                else{
+                }else{
                     alert("OTP inválido");
                 }
             });

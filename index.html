@@ -19,7 +19,8 @@
     <input type="email" id="email" placeholder="Digite seu email">
 
     <div class="otpverify" style="display:none;">
-      <input type="text" id="otpInput" placeholder="Digite o código OTP enviado para seu e-mail">
+      <p>E-mail: <input type="text" id="otpInput" placeholder="Digite o código OTP enviado para seu e-mail" required></p>
+      <p>Senha: <input type="password" id="senhaInput" placeholder="Digite sua senha" required></p>
       <button class="btn" id="btnVerificar">Verificar</button>
     </div>
     <button onclick="mandarOTP()" class="btn">Enviar OTP</button>
