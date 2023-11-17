@@ -16,7 +16,7 @@ function mandarOTP(){
         To : email.value,
         From : "nathalia.reginavt@gmail.com",
         Subject : "Código de verificação",
-        Body : emailbody
+        Body : corpoEmail
     }).then(
       message => {
         if(message === "OK"){
