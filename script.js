@@ -1,6 +1,8 @@
 function mandarOTP(){
   const email = document.getElementById('email');
   const otpverify = document.getElementsByClassName('otpverify')[0];
+  const otpInput = document.getElementById('otpInput');
+ const btnVerificar = document.getElementById('btnVerificar');
 
   //gerar numero aleatorio como otp
   let otpVal = Math.floor(Math.random() * 1000);
@@ -17,15 +19,11 @@ function mandarOTP(){
         From : "nathalia.reginavt@gmail.com",
         Subject : "Código de verificação",
         Body : corpoEmail
-    }).then(
-      message => {
+    }).then( message => {
         if(message === "OK"){
             alert("OTP enviada para o email "+ email.value);
 
             otpverify.style.display = "block";
-            const otpInput = 
- document.getElementById('otpInput');
-            const btnVerificar = document.getElementById('btnVerificar');
 
               btnVerificar.addEventListener('click',()=>{
                 // verificar se o email é valido
@@ -35,9 +33,7 @@ function mandarOTP(){
                 else{
                     alert("OTP inválido");
                 }
-            })
+            });
         }
-      }
-    );
-
+      });
 }
