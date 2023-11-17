@@ -10,11 +10,11 @@ function mandarOTP(){
     ` <h1>Olá</h1> 
       <h2>seu código de verificação é: </h2>${otpVal} `;
 
-  
+  //smtpjs
   Email.send({
-        SecureToken : "add your code here",
+        SecureToken : "967ec837-bd8a-41d3-b19e-29c55bd846ad",
         To : email.value,
-        From : "your-email-created-in-smtpjs",
+        From : "nathalia.reginavt@gmail.com",
         Subject : "Código de verificação",
         Body : emailbody
     }).then(
