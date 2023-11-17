@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Login com OTP</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  
+</head>
+
+<body>
+
+  <h1>Login usando OTP</h1>
+  <div class="form">
+    <input type="email" id="email" placeholder="Digite seu email">
+
+    <div class="otpverify">
+      <input type="text" id="otpInput" placeholder="Digite o código OTP enviado para seu e-mail">
+      <button class="btn" id="btnVerificar">Verificar</button>
+    </div>
+    <button onclick="mandarOTP()" class="btn">Enviar OTP</button>
+  </div>
+  <script src="script.js"></script>
+
+  <script> </script>
+</body>
+
+</html>
