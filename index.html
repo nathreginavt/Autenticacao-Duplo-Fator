@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Login com OTP</title>
+  <title>Login</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 
   <script src="https://smtpjs.com/v3/smtp.js">
@@ -14,9 +14,9 @@
 
 <body>
 
-  <h1>Login usando OTP</h1>
+  <h1>Login</h1>
   <div class="form">
-    <p id="pemail">Email: <input type="email" id="email" placeholder="Digite seu email"></p>
+    <p>Email: <input type="email" id="email" placeholder="Digite seu email"></p>
 
     <button onclick="proximo()" class="btn" id="btnProximo"> Próximo</button>
 
@@ -27,7 +27,7 @@
       <button class="btn" id="btnVerificar">Verificar</button>
     </div>
 
-    <button onclick="mandarOTP()" class="btn">Enviar OTP</button>
+    <button onclick="verificarSenha()" style="display:none;" class="btn"  id="btnMandarOTP">Enviar OTP</button>
 
   </div>
 

@@ -1,12 +1,30 @@
 function proximo(){
   const psenha = document.getElementById('psenha');
-  const pemail = document.getElementById('pemail');
-  // const senhaInput = document.getElementById('senhaInput');
-  // const senha = 123456;
+  const inputemail = document.getElementById('email');
+  const btnProximo = document.getElementById('btnProximo');
+  const btnMandarOTP = document.getElementById('btnMandarOTP');
 
-  psenha.style.display = "block";
-  psenha.style.disabled = "true";
+  if(inputemail.value !== ''){
+    psenha.style.display = "block";
+    inputemail.disabled = 'true';
+    btnProximo.style.display = "none";
+    btnMandarOTP.style.display = "block";
+  }
+  else{
+    alert("Digite o email!");
+  }
+}
 
+function verificarSenha(){
+  const senhaDigitada = document.getElementById('senhaInput').value;
+  const senha = 123456;
+
+  if(senhaDigitada == senha){
+      mandarOTP();
+  }
+  else{
+    alert("Senha inválida!");
+  }
 }
 
 function mandarOTP(){
@@ -34,6 +52,9 @@ function mandarOTP(){
         if(message === "OK"){
             alert("OTP enviada para o email "+ email.value);
 
+            document.getElementById('btnMandarOTP').style.display = "none";
+            document.getElementById('senhaInput').disabled = "true"
+          
             otpverify.style.display = "block";
 
               btnVerificar.addEventListener('click',()=>{
