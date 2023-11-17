@@ -1,3 +1,14 @@
+function proximo(){
+  const psenha = document.getElementById('psenha');
+  const pemail = document.getElementById('pemail');
+  // const senhaInput = document.getElementById('senhaInput');
+  // const senha = 123456;
+
+  psenha.style.display = "block";
+  psenha.style.disabled = "true";
+
+}
+
 function mandarOTP(){
   const email = document.getElementById('email');
   const otpverify = document.getElementsByClassName('otpverify')[0];

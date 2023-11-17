@@ -16,15 +16,21 @@
 
   <h1>Login usando OTP</h1>
   <div class="form">
-    <p>Email: <input type="email" id="email" placeholder="Digite seu email"></p>
-    <p>Senha: <input type="password" id="senhaInput" placeholder="Digite sua senha" required></p>
+    <p id="pemail">Email: <input type="email" id="email" placeholder="Digite seu email"></p>
+
+    <button onclick="proximo()" class="btn" id="btnProximo"> Próximo</button>
+
+    <p style="display:none;" id="psenha">Senha: <input type="password" id="senhaInput" placeholder="Digite sua senha" required></p>
 
     <div class="otpverify" style="display:none;">
       <input type="text" id="otpInput" placeholder="Digite o código OTP enviado para seu e-mail" required>
       <button class="btn" id="btnVerificar">Verificar</button>
     </div>
+
     <button onclick="mandarOTP()" class="btn">Enviar OTP</button>
+
   </div>
+
   <script src="script.js"></script>
 </body>
 
