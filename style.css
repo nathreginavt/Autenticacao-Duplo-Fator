@@ -1,5 +1,9 @@
-body{
+body {
   text-align: center;
+}
+
+h1, p {
+  color: blue;
 }
 
 .form {
@@ -10,13 +14,15 @@ body{
   justify-content: center;
   width: fit-content;
   margin: auto;
+  background-color: lightblue;
+  padding: 2rem;
 }
 
-input{
+input {
   padding: 0.6rem;
 }
 
-.btn{
+.btn {
   padding: 0.5rem 0.8rem;
   background-color: blue;
   outline: none;
@@ -25,6 +31,6 @@ input{
   border-radius: 16px;
 }
 
-.otpverify{
+.otpverify {
   display: none;
 }
