@@ -9,25 +9,39 @@
 
   <script src="https://smtpjs.com/v3/smtp.js">
   </script>
-  
+
 </head>
 
 <body>
 
-  <h1>LOGIN</h1>
   <div class="form">
-    <p>Email: <input type="email" id="email" placeholder="Digite seu email"></p>
+    <h1>Atividade</h1>
+    <div class="email-field">
+      <p>Email </p>
+      <input type="email" id="email" onchange="proximo()" placeholder="Digite seu email" />
+      <div class="alert-msg" style="display: none;" id="alert-msg">
+        <small id="small-msg"></small>
+      </div>
+    </div>
 
-    <button onclick="proximo()" class="btn" id="btnProximo"> Próximo</button>
 
-    <p style="display:none;" id="psenha">Senha: <input type="password" id="senhaInput" placeholder="Digite sua senha" required></p>
+    <div class="email-field">
+      <p id="psenha">Senha </p>
+      <input type="password" id="senhaInput" placeholder="Digite sua senha" required>
+
+      <div class="alert-msg" style="display: none;" id="alert-msg">
+        <small id="small-msg"></small>
+      </div>
+    </div>
+
+    <!-- <button onclick="proximo()" class="btn" id="btnProximo"> Próximo</button> -->
 
     <div class="otpverify" style="display:none;">
       <input type="text" id="otpInput" placeholder="Digite o código OTP enviado para seu e-mail" required>
       <button class="btn" id="btnVerificar">Verificar</button>
     </div>
 
-    <button onclick="verificarSenha()" style="display:none;" class="btn"  id="btnMandarOTP">Enviar OTP</button>
+    <button onclick="verificarSenha()" class="btn" id="btnMandarOTP">Enviar OTP</button>
 
   </div>
 

@@ -1,4 +1,8 @@
 //validar padrão do email
+
+let alertMsg = document.getElementById("alert-msg")
+let smallMsg = document.getElementById("small-msg")
+
 function emailValido(email) {
   
   // Padrão = qualquerNome@fatec.sp.gov.br
@@ -7,7 +11,9 @@ function emailValido(email) {
   if (emailRegex.test(email)) {
       return true;
   } else {
-      alert("Digite um email válido @fatec.sp.gov.br");
+    alertMsg.style.display = "block" 
+    smallMsg.innerHTML = "Digite um email válido @fatec.sp.gov.br"
+    // "Digite um email válido @fatec.sp.gov.br");
       return false;
   }
 }
@@ -23,12 +29,16 @@ if(inputemail.value !== ''){
   if (emailValido(inputemail.value)){
     psenha.style.display = "block";
     inputemail.disabled = 'true';
-    btnProximo.style.display = "none";
     btnMandarOTP.style.display = "block";
+    alertMsg.style.display = "none"
+    smallMsg.style.display = "none"
+    smallMsg.innerHTML = ""
+
   }
 }
 else{
-  alert("Digite o email!");
+    alertMsg.style.display = "block"
+    smallMsg.innerHTML = "Digite um e-mail"
 }                            
 }
 
@@ -40,7 +50,7 @@ if(senhaDigitada == senha){
     mandarOTP();
 }
 else{
-  alert("Senha inválida!");
+  alert("Preencha os dados corretamente!");
 }
 }
 
@@ -72,7 +82,9 @@ Email.send({
           document.getElementById('btnMandarOTP').style.display = "none";
           document.getElementById('senhaInput').disabled = "true"
 
-          otpverify.style.display = "block";
+          otpverify.style.display = "flex";
+          otpverify.style.justifyContent  = "space-between";
+          
 
             btnVerificar.addEventListener('click',()=>{
               // verificar se o email é valido

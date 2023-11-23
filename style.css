@@ -1,21 +1,54 @@
 body {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(147, 164, 211);
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1, p {
-  color: blue;
+.alert-msg {
+  color: red;
+  text-align: end;
+  width: 100%;
 }
+
+h1 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   align-items: center;
   justify-content: center;
-  width: fit-content;
-  margin: auto;
-  background-color: lightblue;
+  gap: 1rem;
+  background-color: #fff;
   padding: 2rem;
+  border-radius: 25px;
+  min-width: 400px;
+}
+
+.form .email-field  {
+
+}
+
+.form .email-field, 
+.form .email-field input {
+  width: 100%;
+}
+
+
+.form .email-field input {
+  width: 94%;
+}
+
+.form .email-field p {
+  margin: 0;
+  padding-block: 8px;
 }
 
 input {
@@ -23,14 +56,22 @@ input {
 }
 
 .btn {
-  padding: 0.5rem 0.8rem;
-  background-color: blue;
+  padding: 1rem 1.2rem;
+  background-color: rgb(94, 104, 134);;
   outline: none;
   border: none;
   cursor: pointer;
   border-radius: 16px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+
 }
 
 .otpverify {
-  display: none;
+  width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
 }
